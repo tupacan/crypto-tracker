@@ -1,0 +1,58 @@
+@import "../../styles/colors";
+
+.tableWrap {
+    width: 100%;
+    font-size: 1rem;
+    border-spacing: 0;
+    background-color: darken($secondary, 3%);
+    color: $gray-600;
+
+    td {
+        padding: 0.9em 1.2em;
+        border-bottom: 1px solid lighten($primary, 8%);
+        white-space: nowrap;
+
+        &:first-child {
+            padding-left: 2em;
+            padding-right: 0;
+        }
+    }
+}
+
+.tableHead {
+
+    td {
+        color: $primary;
+        background-color: $accent;
+        position: sticky;
+        top: 0;
+        font-weight: 700;
+        z-index: 1;
+        border-bottom: 1px solid lighten($primary, 20%);
+    }
+}
+
+.coinNameWrap {
+    display: flex;
+    align-items: center;
+}
+
+.coinName {
+    font-weight: 700;
+    margin-left: 1em;
+}
+
+.coinSymbol {
+    text-transform: uppercase;
+    color: transparentize($gray-600, 0.5);
+    font-weight: 500;
+    margin-left: 0.5em;
+}
+
+.red {
+    color: $red;
+}
+
+.green {
+    color: $green;
+}
