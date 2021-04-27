@@ -29,8 +29,13 @@ function Row({ coin }) {
                         height={25}
                         key={id}
                     />
-                    <span className={styles.coinName}>{`${name}`}</span>{" "}
-                    <span className={styles.coinSymbol}>{`${symbol}`}</span>
+                    <span className={styles.coinInfo}>
+                        <span className={styles.coinName}>{`${name}`}</span>
+                        <span className={styles.coinMeta}>
+                            <span className={styles.coinRankMobile}>#{rank}</span>
+                            <span className={styles.coinSymbol}>{`${symbol}`}</span>
+                        </span>
+                    </span>
                 </span>
             </td>
             <td>
@@ -63,9 +68,6 @@ function Row({ coin }) {
             <td>
                 <span key={id}>&euro;{volume.toLocaleString()}</span>
             </td>
-            {/* <td>
-                <span key={id}>&euro;{marketCap.toLocaleString()}</span>
-            </td> */}
         </tr>
     );
 }
